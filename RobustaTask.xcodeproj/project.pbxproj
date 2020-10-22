@@ -3,17 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89D147901BF8BE2D7A22DC35 /* Pods_RobustaTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD8FAE4A2A527533ADD0476D /* Pods_RobustaTask.framework */; };
 		BF0D94202541B7400035C105 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0D941F2541B7400035C105 /* AppDelegate.swift */; };
 		BF0D94222541B7400035C105 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0D94212541B7400035C105 /* SceneDelegate.swift */; };
-		BF0D94242541B7400035C105 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0D94232541B7400035C105 /* ViewController.swift */; };
 		BF0D94272541B7400035C105 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0D94252541B7400035C105 /* Main.storyboard */; };
 		BF0D94292541B7430035C105 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF0D94282541B7430035C105 /* Assets.xcassets */; };
 		BF0D942C2541B7430035C105 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0D942A2541B7430035C105 /* LaunchScreen.storyboard */; };
 		BF0D94372541B7430035C105 /* RobustaTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0D94362541B7430035C105 /* RobustaTaskTests.swift */; };
+		BF0D94432541BB8E0035C105 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0D94422541BB8E0035C105 /* TableViewController.swift */; };
+		BF0D94452541BB9F0035C105 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0D94442541BB9F0035C105 /* InfoViewController.swift */; };
+		BF0D94522541BC140035C105 /* RepositoryParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0D944D2541BC140035C105 /* RepositoryParser.m */; };
+		BF0D94532541BC140035C105 /* RepositoryFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0D944E2541BC140035C105 /* RepositoryFetcher.m */; };
+		BF0D945B2541BD300035C105 /* RepositoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0D945A2541BD300035C105 /* RepositoryModel.m */; };
+		BF0D94602541BD610035C105 /* OwnerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0D945F2541BD610035C105 /* OwnerModel.m */; };
+		BF0D94662541C4BF0035C105 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0D94642541C4BF0035C105 /* TableViewCell.swift */; };
+		BF0D94672541C4BF0035C105 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF0D94652541C4BF0035C105 /* TableViewCell.xib */; };
+		F54E1769B3E716C1613DFCC2 /* Pods_RobustaTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA18583F7BEF1C4B256E5F6A /* Pods_RobustaTaskTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,10 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F98189C9310EA9760F60558 /* Pods-RobustaTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RobustaTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-RobustaTaskTests/Pods-RobustaTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5B3BAFBCDB1C330EB7E5E2E3 /* Pods-RobustaTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RobustaTaskTests.release.xcconfig"; path = "Target Support Files/Pods-RobustaTaskTests/Pods-RobustaTaskTests.release.xcconfig"; sourceTree = "<group>"; };
+		66FE1D198042FAD6E2A0912F /* Pods-RobustaTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RobustaTask.debug.xcconfig"; path = "Target Support Files/Pods-RobustaTask/Pods-RobustaTask.debug.xcconfig"; sourceTree = "<group>"; };
 		BF0D941C2541B7400035C105 /* RobustaTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RobustaTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0D941F2541B7400035C105 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF0D94212541B7400035C105 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BF0D94232541B7400035C105 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BF0D94262541B7400035C105 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF0D94282541B7430035C105 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF0D942B2541B7430035C105 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +49,24 @@
 		BF0D94322541B7430035C105 /* RobustaTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RobustaTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0D94362541B7430035C105 /* RobustaTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobustaTaskTests.swift; sourceTree = "<group>"; };
 		BF0D94382541B7430035C105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF0D94422541BB8E0035C105 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		BF0D94442541BB9F0035C105 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		BF0D94492541BC130035C105 /* RobustaTask-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RobustaTask-Bridging-Header.h"; sourceTree = "<group>"; };
+		BF0D944A2541BC140035C105 /* RepositoryFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoryFetcher.h; sourceTree = "<group>"; };
+		BF0D944C2541BC140035C105 /* RepositoryParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoryParser.h; sourceTree = "<group>"; };
+		BF0D944D2541BC140035C105 /* RepositoryParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoryParser.m; sourceTree = "<group>"; };
+		BF0D944E2541BC140035C105 /* RepositoryFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoryFetcher.m; sourceTree = "<group>"; };
+		BF0D94502541BC140035C105 /* RepositoryFetcherProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoryFetcherProtocol.h; sourceTree = "<group>"; };
+		BF0D94512541BC140035C105 /* RepositoryParserProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoryParserProtocol.h; sourceTree = "<group>"; };
+		BF0D94592541BD300035C105 /* RepositoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RepositoryModel.h; sourceTree = "<group>"; };
+		BF0D945A2541BD300035C105 /* RepositoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RepositoryModel.m; sourceTree = "<group>"; };
+		BF0D945E2541BD610035C105 /* OwnerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OwnerModel.h; sourceTree = "<group>"; };
+		BF0D945F2541BD610035C105 /* OwnerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OwnerModel.m; sourceTree = "<group>"; };
+		BF0D94642541C4BF0035C105 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		BF0D94652541C4BF0035C105 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		C0D4269F319D078FC0EB681B /* Pods-RobustaTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RobustaTask.release.xcconfig"; path = "Target Support Files/Pods-RobustaTask/Pods-RobustaTask.release.xcconfig"; sourceTree = "<group>"; };
+		EA18583F7BEF1C4B256E5F6A /* Pods_RobustaTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RobustaTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD8FAE4A2A527533ADD0476D /* Pods_RobustaTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RobustaTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89D147901BF8BE2D7A22DC35 /* Pods_RobustaTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F54E1769B3E716C1613DFCC2 /* Pods_RobustaTaskTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +95,8 @@
 				BF0D941E2541B7400035C105 /* RobustaTask */,
 				BF0D94352541B7430035C105 /* RobustaTaskTests */,
 				BF0D941D2541B7400035C105 /* Products */,
+				FD998BFF0CEB2FFE03937F9B /* Pods */,
+				D7E17FF294ECC3CC7BF17F48 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,13 +112,15 @@
 		BF0D941E2541B7400035C105 /* RobustaTask */ = {
 			isa = PBXGroup;
 			children = (
+				BF0D94622541C4080035C105 /* View */,
+				BF0D94542541BCCD0035C105 /* Model */,
+				BF0D94462541BBB50035C105 /* Network */,
+				BF0D94412541BB5E0035C105 /* ViewControllers */,
 				BF0D941F2541B7400035C105 /* AppDelegate.swift */,
 				BF0D94212541B7400035C105 /* SceneDelegate.swift */,
-				BF0D94232541B7400035C105 /* ViewController.swift */,
-				BF0D94252541B7400035C105 /* Main.storyboard */,
 				BF0D94282541B7430035C105 /* Assets.xcassets */,
-				BF0D942A2541B7430035C105 /* LaunchScreen.storyboard */,
 				BF0D942D2541B7430035C105 /* Info.plist */,
+				BF0D94492541BC130035C105 /* RobustaTask-Bridging-Header.h */,
 			);
 			path = RobustaTask;
 			sourceTree = "<group>";
@@ -99,6 +134,118 @@
 			path = RobustaTaskTests;
 			sourceTree = "<group>";
 		};
+		BF0D94412541BB5E0035C105 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF0D94422541BB8E0035C105 /* TableViewController.swift */,
+				BF0D94442541BB9F0035C105 /* InfoViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BF0D94462541BBB50035C105 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BF0D94612541BF4E0035C105 /* Fetcher */,
+				BF0D944B2541BC140035C105 /* Parser */,
+				BF0D944F2541BC140035C105 /* Protocols */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BF0D944B2541BC140035C105 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				BF0D944C2541BC140035C105 /* RepositoryParser.h */,
+				BF0D944D2541BC140035C105 /* RepositoryParser.m */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		BF0D944F2541BC140035C105 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BF0D94502541BC140035C105 /* RepositoryFetcherProtocol.h */,
+				BF0D94512541BC140035C105 /* RepositoryParserProtocol.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BF0D94542541BCCD0035C105 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF0D945D2541BD470035C105 /* OwnerModel */,
+				BF0D945C2541BD360035C105 /* RepositoryModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF0D945C2541BD360035C105 /* RepositoryModel */ = {
+			isa = PBXGroup;
+			children = (
+				BF0D94592541BD300035C105 /* RepositoryModel.h */,
+				BF0D945A2541BD300035C105 /* RepositoryModel.m */,
+			);
+			path = RepositoryModel;
+			sourceTree = "<group>";
+		};
+		BF0D945D2541BD470035C105 /* OwnerModel */ = {
+			isa = PBXGroup;
+			children = (
+				BF0D945E2541BD610035C105 /* OwnerModel.h */,
+				BF0D945F2541BD610035C105 /* OwnerModel.m */,
+			);
+			path = OwnerModel;
+			sourceTree = "<group>";
+		};
+		BF0D94612541BF4E0035C105 /* Fetcher */ = {
+			isa = PBXGroup;
+			children = (
+				BF0D944A2541BC140035C105 /* RepositoryFetcher.h */,
+				BF0D944E2541BC140035C105 /* RepositoryFetcher.m */,
+			);
+			path = Fetcher;
+			sourceTree = "<group>";
+		};
+		BF0D94622541C4080035C105 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF0D94632541C49A0035C105 /* CustomTableViewCell */,
+				BF0D94252541B7400035C105 /* Main.storyboard */,
+				BF0D942A2541B7430035C105 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF0D94632541C49A0035C105 /* CustomTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BF0D94642541C4BF0035C105 /* TableViewCell.swift */,
+				BF0D94652541C4BF0035C105 /* TableViewCell.xib */,
+			);
+			path = CustomTableViewCell;
+			sourceTree = "<group>";
+		};
+		D7E17FF294ECC3CC7BF17F48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD8FAE4A2A527533ADD0476D /* Pods_RobustaTask.framework */,
+				EA18583F7BEF1C4B256E5F6A /* Pods_RobustaTaskTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD998BFF0CEB2FFE03937F9B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66FE1D198042FAD6E2A0912F /* Pods-RobustaTask.debug.xcconfig */,
+				C0D4269F319D078FC0EB681B /* Pods-RobustaTask.release.xcconfig */,
+				4F98189C9310EA9760F60558 /* Pods-RobustaTaskTests.debug.xcconfig */,
+				5B3BAFBCDB1C330EB7E5E2E3 /* Pods-RobustaTaskTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +253,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF0D943B2541B7430035C105 /* Build configuration list for PBXNativeTarget "RobustaTask" */;
 			buildPhases = (
+				792F4B36F53E22A363736CDD /* [CP] Check Pods Manifest.lock */,
 				BF0D94182541B7400035C105 /* Sources */,
 				BF0D94192541B7400035C105 /* Frameworks */,
 				BF0D941A2541B7400035C105 /* Resources */,
+				31D02E911F4E79443D01B153 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +272,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF0D943E2541B7430035C105 /* Build configuration list for PBXNativeTarget "RobustaTaskTests" */;
 			buildPhases = (
+				A5E3787468D9971124BA9F16 /* [CP] Check Pods Manifest.lock */,
 				BF0D942E2541B7430035C105 /* Sources */,
 				BF0D942F2541B7430035C105 /* Frameworks */,
 				BF0D94302541B7430035C105 /* Resources */,
@@ -149,6 +299,7 @@
 				TargetAttributes = {
 					BF0D941B2541B7400035C105 = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
 					};
 					BF0D94312541B7430035C105 = {
 						CreatedOnToolsVersion = 11.4.1;
@@ -181,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF0D942C2541B7430035C105 /* LaunchScreen.storyboard in Resources */,
+				BF0D94672541C4BF0035C105 /* TableViewCell.xib in Resources */,
 				BF0D94292541B7430035C105 /* Assets.xcassets in Resources */,
 				BF0D94272541B7400035C105 /* Main.storyboard in Resources */,
 			);
@@ -195,14 +347,84 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		31D02E911F4E79443D01B153 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RobustaTask/Pods-RobustaTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RobustaTask/Pods-RobustaTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RobustaTask/Pods-RobustaTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		792F4B36F53E22A363736CDD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RobustaTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5E3787468D9971124BA9F16 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RobustaTaskTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BF0D94182541B7400035C105 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF0D94242541B7400035C105 /* ViewController.swift in Sources */,
 				BF0D94202541B7400035C105 /* AppDelegate.swift in Sources */,
+				BF0D94532541BC140035C105 /* RepositoryFetcher.m in Sources */,
+				BF0D94432541BB8E0035C105 /* TableViewController.swift in Sources */,
+				BF0D94662541C4BF0035C105 /* TableViewCell.swift in Sources */,
+				BF0D94602541BD610035C105 /* OwnerModel.m in Sources */,
+				BF0D94452541BB9F0035C105 /* InfoViewController.swift in Sources */,
 				BF0D94222541B7400035C105 /* SceneDelegate.swift in Sources */,
+				BF0D94522541BC140035C105 /* RepositoryParser.m in Sources */,
+				BF0D945B2541BD300035C105 /* RepositoryModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,8 +582,10 @@
 		};
 		BF0D943C2541B7430035C105 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66FE1D198042FAD6E2A0912F /* Pods-RobustaTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2A542S6399;
 				INFOPLIST_FILE = RobustaTask/Info.plist;
@@ -371,6 +595,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mostafa.RobustaTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RobustaTask/RobustaTask-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -378,8 +604,10 @@
 		};
 		BF0D943D2541B7430035C105 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0D4269F319D078FC0EB681B /* Pods-RobustaTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2A542S6399;
 				INFOPLIST_FILE = RobustaTask/Info.plist;
@@ -389,6 +617,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mostafa.RobustaTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RobustaTask/RobustaTask-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -396,6 +625,7 @@
 		};
 		BF0D943F2541B7430035C105 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F98189C9310EA9760F60558 /* Pods-RobustaTaskTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -418,6 +648,7 @@
 		};
 		BF0D94402541B7430035C105 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B3BAFBCDB1C330EB7E5E2E3 /* Pods-RobustaTaskTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
