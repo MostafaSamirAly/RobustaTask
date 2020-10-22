@@ -13,7 +13,9 @@ class TableViewControllerPresenter: TableViewControllerPresenterProtocol {
     private weak var view: TableViewControllerProtocol?
     private var parser:RepositoryParserProtocol
     private var repositories:[RepositoryModel] = [RepositoryModel]()
+    private var displayRepositories:[RepositoryModel] = [RepositoryModel]()
     private var fetcher:RepositoryFetcher
+    private var page:Int = 2
     init(view:TableViewControllerProtocol) {
         self.view = view
         self.parser = RepositoryParser()
@@ -23,6 +25,7 @@ class TableViewControllerPresenter: TableViewControllerPresenterProtocol {
     func fetchRepositories() {
         fetcher.fetchRepos(success: { [weak self] (response) in
             self?.repositories = response
+            self?.displayRepositories = Array(response.prefix(10))
             self?.view?.reloadView()
         }, error: { [weak self] error in
             self?.view?.showError(error: error)
@@ -30,11 +33,20 @@ class TableViewControllerPresenter: TableViewControllerPresenterProtocol {
     }
     
     func getRepositoriesCount() -> Int {
-        return repositories.count
+        return displayRepositories.count
     }
     
     func getRepository(at indexPath: IndexPath) -> RepositoryModel {
-        return repositories[indexPath.row]
+        return displayRepositories[indexPath.row]
     }
-
+    
+    func displayMore() {
+        if (page*10) >= repositories.count{
+            displayRepositories = repositories
+        }else{
+            displayRepositories = Array(repositories.prefix(page*10))
+            page += 1
+        }
+        self.view?.reloadView()
+    }
 }

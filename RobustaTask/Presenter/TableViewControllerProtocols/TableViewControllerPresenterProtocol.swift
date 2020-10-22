@@ -12,4 +12,5 @@ protocol TableViewControllerPresenterProtocol {
     func fetchRepositories()
     func getRepositoriesCount()->Int
     func getRepository(at indexPath:IndexPath)->RepositoryModel
+    func displayMore()
 }

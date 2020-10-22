@@ -18,7 +18,6 @@ class TableViewController: UIViewController {
         self.presenter = TableViewControllerPresenter(view:self)
         self.setupView()
         presenter?.fetchRepositories()
-        // Do any additional setup after loading the view.
     }
 
     func setupView(){
@@ -32,17 +31,31 @@ class TableViewController: UIViewController {
 
 extension TableViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter?.getRepositoriesCount() ?? 0
+        if presenter?.getRepositoriesCount() == 0{
+            return 0
+        }else if presenter?.getRepositoriesCount() == 100{
+            return 100
+        }else{
+            return presenter?.getRepositoriesCount() ?? 0 + 1
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = reposTableView.dequeueReusableCell(withIdentifier: tableViewCellIdentifier, for: indexPath) as? TableViewCell else{return UITableViewCell()}
-        cell.setupCell(repo: (presenter?.getRepository(at: indexPath) ?? RepositoryModel()))
-        return cell
+            guard let cell = reposTableView.dequeueReusableCell(withIdentifier: tableViewCellIdentifier, for: indexPath) as? TableViewCell else{return UITableViewCell()}
+                   cell.setupCell(repo: (presenter?.getRepository(at: indexPath) ?? RepositoryModel()))
+                   return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70.0
+       return 70
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == ((presenter?.getRepositoriesCount() ?? 1000) - 1),
+        presenter?.getRepositoriesCount() ?? 100 < 100{
+            presenter?.displayMore()
+        }
     }
     
 }
@@ -59,6 +72,4 @@ extension TableViewController: TableViewControllerProtocol{
     func showError(error: Error) {
         Helper.showErrorAlert(view: self, error: error)
     }
-    
-    
 }
