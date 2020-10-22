@@ -22,7 +22,7 @@
         repo.repoDescription = [fetchedArr objectAtIndex:i][@"description"];
         repo.repoName = [fetchedArr objectAtIndex:i][@"full_name"];
         owner.imagePath = ownerDictionary[@"avatar_url"];
-        owner.name = ownerDictionary[@"mojombo"];
+        owner.name = ownerDictionary[@"login"];
         owner.ownerId = ownerDictionary[@"id"];
         repo.repoOwner = owner;
         [repos addObject:repo];

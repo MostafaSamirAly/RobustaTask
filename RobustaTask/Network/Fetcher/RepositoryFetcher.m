@@ -27,8 +27,9 @@
 
     NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request uploadProgress:NULL downloadProgress:NULL completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
         if (error) {
-
+            errorCompletion(error);
         } else {
+
             [self.parser parseRepositories:responseObject withSuccess:successCompletion error:errorCompletion];
         }
     }];
