@@ -32,7 +32,7 @@ extension InfoViewController: InfoViewControllerProtocol{
         avatarImageView.sd_setImage(with: URL(string: repo.repoOwner.imagePath), completed: nil)
         ownerNameLabel.text = repo.repoOwner.name
         describtionLabel.text = repo.repoDescription
-        navigationController?.navigationBar.topItem?.title = "\(repo.repoOwner.name)'s Repository"
+        self.navigationItem.title = "\(repo.repoOwner.name)'s Repository"
     }
     
     func openBrowserWith(url: String) {
