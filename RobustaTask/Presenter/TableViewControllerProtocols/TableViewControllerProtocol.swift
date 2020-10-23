@@ -11,4 +11,5 @@ import Foundation
 protocol TableViewControllerProtocol: class {
     func reloadView()
     func showError(error:Error)
+    func navigateToInfoView(with repo:RepositoryModel)
 }

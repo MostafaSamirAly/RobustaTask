@@ -24,6 +24,7 @@
         owner.imagePath = ownerDictionary[@"avatar_url"];
         owner.name = ownerDictionary[@"login"];
         owner.ownerId = ownerDictionary[@"id"];
+        owner.url = ownerDictionary[@"html_url"];
         repo.repoOwner = owner;
         [repos addObject:repo];
     }

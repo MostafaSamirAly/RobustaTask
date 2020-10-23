@@ -13,4 +13,5 @@ protocol TableViewControllerPresenterProtocol {
     func getRepositoriesCount()->Int
     func getRepository(at indexPath:IndexPath)->RepositoryModel
     func displayMore()
+    func didSelectItem(at indexPath:IndexPath)
 }

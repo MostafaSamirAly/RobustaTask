@@ -19,13 +19,17 @@ class TableViewController: UIViewController {
         self.setupView()
         presenter?.fetchRepositories()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.navigationBar.topItem?.title = "GitHub Repositories"
+    }
 
     func setupView(){
         reposTableView.delegate = self
         reposTableView.dataSource = self
         let customCellNib: UINib = UINib(nibName: String(describing:TableViewCell.self), bundle: nil)
         reposTableView.register(customCellNib, forCellReuseIdentifier: tableViewCellIdentifier)
-        self.navigationController?.navigationBar.topItem?.title = "GitHub Repositories"
     }
 }
 
@@ -62,6 +66,9 @@ extension TableViewController: UITableViewDataSource{
 
 extension TableViewController: UITableViewDelegate{
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.didSelectItem(at: indexPath)
+    }
 }
 
 extension TableViewController: TableViewControllerProtocol{
@@ -70,6 +77,16 @@ extension TableViewController: TableViewControllerProtocol{
     }
     
     func showError(error: Error) {
-        Helper.showErrorAlert(view: self, error: error)
+        Helper.showErrorAlert(view: self, error: error.localizedDescription)
+    }
+    
+    func navigateToInfoView(with repo:RepositoryModel){
+        guard let infoVC = storyboard?.instantiateViewController(identifier: "InfoViewController") as? InfoViewController else{
+            Helper.showErrorAlert(view: self, error: "Cannot open repository's details")
+            return}
+        let infoPresenter = InfoViewControllerPresenter(view: infoVC)
+        infoPresenter.setRepository(repo: repo)
+        infoVC.presenter = infoPresenter
+        self.navigationController?.pushViewController(infoVC, animated: true)
     }
 }

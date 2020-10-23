@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+protocol InfoViewControllerPresenterProtocol {
+    func setRepository(repo:RepositoryModel)
+    func getRepository()
+    func openBrowserTapped()
+}

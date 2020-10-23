@@ -38,20 +38,68 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="95.758928571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="RAk-RR-227">
             <objects>
-                <viewController id="ciH-D8-GM3" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InfoViewController" id="ciH-D8-GM3" customClass="InfoViewController" customModule="RobustaTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z6R-tE-en7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CVb-q0-0MK">
+                                <rect key="frame" x="87" y="60" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="aJ2-f0-phV"/>
+                                    <constraint firstAttribute="height" constant="240" id="av2-wz-j4c"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgG-ll-uM5">
+                                <rect key="frame" x="16" y="316" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="748" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dz-XK-fwc">
+                                <rect key="frame" x="16" y="385" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeO-VC-SEf">
+                                <rect key="frame" x="16" y="453.5" width="113" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IOC-2f-7U7"/>
+                                </constraints>
+                                <state key="normal" title="Open in browser"/>
+                                <connections>
+                                    <action selector="openInBrowserTapped:" destination="ciH-D8-GM3" eventType="touchUpInside" id="BEB-Ud-2Ln"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CVb-q0-0MK" firstAttribute="top" secondItem="skR-Sd-8Rb" secondAttribute="top" constant="16" id="HMy-Lt-LYz"/>
+                            <constraint firstItem="1dz-XK-fwc" firstAttribute="leading" secondItem="skR-Sd-8Rb" secondAttribute="leading" constant="16" id="O4h-9U-NXm"/>
+                            <constraint firstItem="skR-Sd-8Rb" firstAttribute="trailing" secondItem="1dz-XK-fwc" secondAttribute="trailing" constant="16" id="Rge-ch-Yv5"/>
+                            <constraint firstItem="skR-Sd-8Rb" firstAttribute="trailing" secondItem="hgG-ll-uM5" secondAttribute="trailing" constant="16" id="Tw3-Mc-c0s"/>
+                            <constraint firstItem="EeO-VC-SEf" firstAttribute="leading" secondItem="skR-Sd-8Rb" secondAttribute="leading" constant="16" id="XtP-1c-VUr"/>
+                            <constraint firstItem="hgG-ll-uM5" firstAttribute="top" secondItem="CVb-q0-0MK" secondAttribute="bottom" constant="16" id="ZuN-2N-j9o"/>
+                            <constraint firstItem="CVb-q0-0MK" firstAttribute="centerX" secondItem="z6R-tE-en7" secondAttribute="centerX" id="amR-6n-RyV"/>
+                            <constraint firstItem="1dz-XK-fwc" firstAttribute="top" secondItem="hgG-ll-uM5" secondAttribute="bottom" constant="48" id="f7V-99-t2u"/>
+                            <constraint firstItem="hgG-ll-uM5" firstAttribute="leading" secondItem="skR-Sd-8Rb" secondAttribute="leading" constant="16" id="g0G-VZ-RaM"/>
+                            <constraint firstItem="EeO-VC-SEf" firstAttribute="top" secondItem="1dz-XK-fwc" secondAttribute="bottom" constant="48" id="z2R-Yh-1SX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="skR-Sd-8Rb"/>
                     </view>
+                    <connections>
+                        <outlet property="avatarImageView" destination="CVb-q0-0MK" id="MJZ-DE-vIZ"/>
+                        <outlet property="describtionLabel" destination="1dz-XK-fwc" id="vJZ-KB-wIo"/>
+                        <outlet property="ownerNameLabel" destination="hgG-ll-uM5" id="G2u-if-nK2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EqX-kq-hHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1664" y="92"/>
+            <point key="canvasLocation" x="1797" y="96"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zv3-ku-1Jp">

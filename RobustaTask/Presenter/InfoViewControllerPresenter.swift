@@ -8,6 +8,24 @@
 
 import UIKit
 
-class InfoViewControllerPresenter: NSObject {
-
+class InfoViewControllerPresenter: InfoViewControllerPresenterProtocol {
+    
+    private weak var view: InfoViewControllerProtocol?
+    private var infoRepository:RepositoryModel?
+    
+    init(view: InfoViewControllerProtocol) {
+        self.view = view
+    }
+    
+    func setRepository(repo: RepositoryModel) {
+        self.infoRepository = repo
+    }
+    
+    func getRepository() {
+        self.view?.updateView(repo: infoRepository ?? RepositoryModel())
+    }
+    
+    func openBrowserTapped(){
+        self.view?.openBrowserWith(url: infoRepository?.repoOwner.url ?? "")
+    }
 }

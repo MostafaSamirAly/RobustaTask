@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+protocol InfoViewControllerProtocol: class{
+    func updateView(repo:RepositoryModel)
+    func openBrowserWith(url:String)
+}

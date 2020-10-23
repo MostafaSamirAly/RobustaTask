@@ -49,4 +49,9 @@ class TableViewControllerPresenter: TableViewControllerPresenterProtocol {
         }
         self.view?.reloadView()
     }
+    
+    func didSelectItem(at indexPath:IndexPath){
+        let item = self.displayRepositories[indexPath.row]
+        self.view?.navigateToInfoView(with: item)
+    }
 }

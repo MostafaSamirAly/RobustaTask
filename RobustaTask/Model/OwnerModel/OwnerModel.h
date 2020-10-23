@@ -11,9 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OwnerModel : NSObject
+
 @property NSNumber  *ownerId;
 @property NSString  *imagePath;
 @property NSString *name;
+@property NSString *url;
 
 @end
 

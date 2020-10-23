@@ -9,22 +9,38 @@
 import UIKit
 
 class InfoViewController: UIViewController {
-
+    
+    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var ownerNameLabel: UILabel!
+    @IBOutlet weak var describtionLabel: UILabel!
+    var presenter: InfoViewControllerPresenterProtocol?
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        presenter?.getRepository()
+    }
+    
+    @IBAction func openInBrowserTapped(_ sender: Any) {
+        presenter?.openBrowserTapped()
     }
     
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension InfoViewController: InfoViewControllerProtocol{
+    func updateView(repo: RepositoryModel) {
+        
+        avatarImageView.sd_setImage(with: URL(string: repo.repoOwner.imagePath), completed: nil)
+        ownerNameLabel.text = repo.repoOwner.name
+        describtionLabel.text = repo.repoDescription
+        navigationController?.navigationBar.topItem?.title = "\(repo.repoOwner.name)'s Repository"
     }
-    */
-
+    
+    func openBrowserWith(url: String) {
+        guard let url = URL(string: url) else {
+            Helper.showErrorAlert(view: self, error: "Cannot open this repo" )
+            return
+        }
+       UIApplication.shared.open(url)
+    }
+    
 }
