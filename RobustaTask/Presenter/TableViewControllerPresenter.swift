@@ -10,12 +10,13 @@ import UIKit
 
 class TableViewControllerPresenter: TableViewControllerPresenterProtocol {
     
+    var displayRepositories: [RepositoryModel]?
+    
     private weak var view: TableViewControllerProtocol?
     private var parser:RepositoryParserProtocol
     private var repositories:[RepositoryModel] = [RepositoryModel]()
-    private var displayRepositories:[RepositoryModel] = [RepositoryModel]()
     private var fetcher:RepositoryFetcher
-    private var page:Int = 2
+    private var page: Int = 2
     init(view:TableViewControllerProtocol) {
         self.view = view
         self.parser = RepositoryParser()
@@ -24,20 +25,14 @@ class TableViewControllerPresenter: TableViewControllerPresenterProtocol {
     
     func fetchRepositories() {
         fetcher.fetchRepos(success: { [weak self] (response) in
-            self?.repositories = response
-            self?.displayRepositories = Array(response.prefix(10))
-            self?.view?.reloadView()
+            guard let self = self else { return }
+            self.repositories = response
+            self.displayRepositories = Array(response.prefix(10))
+            self.view?.reloadView()
         }, error: { [weak self] error in
-            self?.view?.showError(error: error)
+            guard let self = self else { return }
+            self.view?.showError(error: error)
         })
-    }
-    
-    func getRepositoriesCount() -> Int {
-        return displayRepositories.count
-    }
-    
-    func getRepository(at indexPath: IndexPath) -> RepositoryModel {
-        return displayRepositories[indexPath.row]
     }
     
     func displayMore() {
@@ -51,7 +46,13 @@ class TableViewControllerPresenter: TableViewControllerPresenterProtocol {
     }
     
     func didSelectItem(at indexPath:IndexPath){
-        let item = self.displayRepositories[indexPath.row]
-        self.view?.navigateToInfoView(with: item)
+        guard let item = displayRepositories?[indexPath.row] else { return }
+        view?.navigateToInfoView(with: item)
+    }
+    
+    func resetData() {
+        page = 2
+        displayRepositories = []
+        repositories = []
     }
 }

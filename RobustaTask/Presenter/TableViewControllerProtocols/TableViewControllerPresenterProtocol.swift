@@ -10,8 +10,8 @@ import Foundation
 
 protocol TableViewControllerPresenterProtocol {
     func fetchRepositories()
-    func getRepositoriesCount()->Int
-    func getRepository(at indexPath:IndexPath)->RepositoryModel
     func displayMore()
     func didSelectItem(at indexPath:IndexPath)
+    func resetData()
+    var displayRepositories: [RepositoryModel]? { get }
 }

@@ -37,7 +37,7 @@ extension UITableView{
         self.separatorStyle = .none
     }
     
-    func restore() {
+    func resetTableView() {
         
         self.backgroundView = nil
         self.separatorStyle = .none

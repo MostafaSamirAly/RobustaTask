@@ -29,6 +29,8 @@
 		BF0D94742541CB020035C105 /* InfoViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0D94732541CB020035C105 /* InfoViewControllerProtocol.swift */; };
 		BF0D94762541CB190035C105 /* InfoViewControllerPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0D94752541CB190035C105 /* InfoViewControllerPresenterProtocol.swift */; };
 		BF0D94792541D2FA0035C105 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0D94782541D2FA0035C105 /* Helper.swift */; };
+		BFCEE1D2254485A90044DC5F /* ReposTableViewController+TableViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCEE1D1254485A80044DC5F /* ReposTableViewController+TableViewControllerProtocol.swift */; };
+		BFCEE1D6254488DD0044DC5F /* InfoViewController+InfoViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCEE1D5254488DD0044DC5F /* InfoViewController+InfoViewControllerProtocol.swift */; };
 		BFD51A6D254358A300813DA2 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD51A6C254358A300813DA2 /* UITableView+Extension.swift */; };
 		F54E1769B3E716C1613DFCC2 /* Pods_RobustaTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA18583F7BEF1C4B256E5F6A /* Pods_RobustaTaskTests.framework */; };
 /* End PBXBuildFile section */
@@ -79,6 +81,8 @@
 		BF0D94732541CB020035C105 /* InfoViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewControllerProtocol.swift; sourceTree = "<group>"; };
 		BF0D94752541CB190035C105 /* InfoViewControllerPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewControllerPresenterProtocol.swift; sourceTree = "<group>"; };
 		BF0D94782541D2FA0035C105 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		BFCEE1D1254485A80044DC5F /* ReposTableViewController+TableViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReposTableViewController+TableViewControllerProtocol.swift"; sourceTree = "<group>"; };
+		BFCEE1D5254488DD0044DC5F /* InfoViewController+InfoViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InfoViewController+InfoViewControllerProtocol.swift"; sourceTree = "<group>"; };
 		BFD51A6C254358A300813DA2 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		C0D4269F319D078FC0EB681B /* Pods-RobustaTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RobustaTask.release.xcconfig"; path = "Target Support Files/Pods-RobustaTask/Pods-RobustaTask.release.xcconfig"; sourceTree = "<group>"; };
 		EA18583F7BEF1C4B256E5F6A /* Pods_RobustaTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RobustaTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,8 +160,8 @@
 		BF0D94412541BB5E0035C105 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BF0D94422541BB8E0035C105 /* TableViewController.swift */,
-				BF0D94442541BB9F0035C105 /* InfoViewController.swift */,
+				BFCEE1D4254486000044DC5F /* InfoViewController */,
+				BFCEE1D3254485E60044DC5F /* ReposTableViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -280,6 +284,24 @@
 				BF0D94782541D2FA0035C105 /* Helper.swift */,
 			);
 			path = HelpingMethods;
+			sourceTree = "<group>";
+		};
+		BFCEE1D3254485E60044DC5F /* ReposTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BFCEE1D1254485A80044DC5F /* ReposTableViewController+TableViewControllerProtocol.swift */,
+				BF0D94422541BB8E0035C105 /* TableViewController.swift */,
+			);
+			path = ReposTableViewController;
+			sourceTree = "<group>";
+		};
+		BFCEE1D4254486000044DC5F /* InfoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BF0D94442541BB9F0035C105 /* InfoViewController.swift */,
+				BFCEE1D5254488DD0044DC5F /* InfoViewController+InfoViewControllerProtocol.swift */,
+			);
+			path = InfoViewController;
 			sourceTree = "<group>";
 		};
 		BFD51A6B2543588900813DA2 /* Extensions */ = {
@@ -483,6 +505,7 @@
 				BF0D94742541CB020035C105 /* InfoViewControllerProtocol.swift in Sources */,
 				BF0D94722541CAEE0035C105 /* TableViewControllerPresenterProtocol.swift in Sources */,
 				BF0D94202541B7400035C105 /* AppDelegate.swift in Sources */,
+				BFCEE1D2254485A90044DC5F /* ReposTableViewController+TableViewControllerProtocol.swift in Sources */,
 				BF0D94532541BC140035C105 /* RepositoryFetcher.m in Sources */,
 				BF0D94432541BB8E0035C105 /* TableViewController.swift in Sources */,
 				BF0D94662541C4BF0035C105 /* TableViewCell.swift in Sources */,
@@ -491,6 +514,7 @@
 				BF0D94762541CB190035C105 /* InfoViewControllerPresenterProtocol.swift in Sources */,
 				BF0D946C2541CA8E0035C105 /* InfoViewControllerPresenter.swift in Sources */,
 				BF0D94452541BB9F0035C105 /* InfoViewController.swift in Sources */,
+				BFCEE1D6254488DD0044DC5F /* InfoViewController+InfoViewControllerProtocol.swift in Sources */,
 				BFD51A6D254358A300813DA2 /* UITableView+Extension.swift in Sources */,
 				BF0D94702541CAD30035C105 /* TableViewControllerProtocol.swift in Sources */,
 				BF0D94222541B7400035C105 /* SceneDelegate.swift in Sources */,
