@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol TableViewControllerPresenterProtocol {
+protocol ReposTableViewControllerPresenterProtocol {
     func fetchRepositories()
     func displayMore()
     func didSelectItem(at indexPath:IndexPath)

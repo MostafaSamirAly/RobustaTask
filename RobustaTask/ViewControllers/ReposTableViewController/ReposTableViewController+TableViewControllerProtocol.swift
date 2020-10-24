@@ -8,21 +8,22 @@
 
 import Foundation
 
-extension ReposTableViewController: TableViewControllerProtocol {
+extension ReposTableViewController: ReposTableViewControllerProtocol {
     func reloadView() {
+
         if presenter?.displayRepositories?.count == 0 {
             reposTableView.setEmptyView(title: "Please Wait", message: "Loading")
         }  else {
             reposTableView.resetTableView()
         }
         refreshController.endRefreshing()
-        self.reposTableView.reloadData()
+        reposTableView.reloadData()
     }
     
     func showError(error: Error) {
-        refreshController.endRefreshing()
-        self.reposTableView.setEmptyView(title: "Error", message: "Pull to refresh")
+        reposTableView.setEmptyView(title: "Error", message: "Pull to refresh")
         Helper.showErrorAlert(view: self, error: error.localizedDescription)
+        refreshController.endRefreshing()
     }
     
     func navigateToInfoView(with repo:RepositoryModel){

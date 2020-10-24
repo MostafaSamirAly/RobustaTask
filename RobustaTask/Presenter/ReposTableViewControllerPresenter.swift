@@ -8,16 +8,17 @@
 
 import UIKit
 
-class TableViewControllerPresenter: TableViewControllerPresenterProtocol {
+class ReposTableViewControllerPresenter: ReposTableViewControllerPresenterProtocol {
     
     var displayRepositories: [RepositoryModel]?
     
-    private weak var view: TableViewControllerProtocol?
+    private weak var view: ReposTableViewControllerProtocol?
     private var parser:RepositoryParserProtocol
     private var repositories:[RepositoryModel] = [RepositoryModel]()
     private var fetcher:RepositoryFetcher
     private var page: Int = 2
-    init(view:TableViewControllerProtocol) {
+    
+    init(view:ReposTableViewControllerProtocol) {
         self.view = view
         self.parser = RepositoryParser()
         self.fetcher = RepositoryFetcher(parser: parser)

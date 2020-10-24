@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol TableViewControllerProtocol: class {
+protocol ReposTableViewControllerProtocol: class {
     func reloadView()
     func showError(error:Error)
     func navigateToInfoView(with repo:RepositoryModel)

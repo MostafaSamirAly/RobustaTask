@@ -9,7 +9,7 @@
 import UIKit
 
 class ReposTableViewController: UIViewController {
-    var presenter: TableViewControllerPresenterProtocol?
+    var presenter: ReposTableViewControllerPresenterProtocol?
     private let tableViewCellIdentifier = "TableViewCell"
     let refreshController = UIRefreshControl()
     @IBOutlet weak var reposTableView: UITableView! {
@@ -25,7 +25,7 @@ class ReposTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = TableViewControllerPresenter(view: self)
+        presenter = ReposTableViewControllerPresenter(view: self)
         setupRefreshControl()
         presenter?.fetchRepositories()
     }
