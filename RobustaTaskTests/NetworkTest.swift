@@ -27,12 +27,15 @@ class NetworkTest: XCTestCase {
         let promise = expectation(description: "Fetcher is fetching data")
         fetcher.fetchRepos(success: { (repositories) in
             if repositories.count == 100{
+                XCTAssertEqual(repositories[0].repoName, "mojombo/grit")
                 promise.fulfill()
             }else{
                 XCTFail("Response is not as Expected")
+                promise.fulfill()
             }
         }) { error in
             XCTFail("Responded with error")
+            promise.fulfill()
         }
         wait(for: [promise], timeout: 5)
     }
@@ -41,12 +44,15 @@ class NetworkTest: XCTestCase {
         let promise = expectation(description: "Parsing Mock Data")
         parser.parseRepositories(data!, withSuccess: { (repositories) in
             if repositories.count == 3{
+                XCTAssertEqual(repositories[0].repoName, "mojombo/grit")
                 promise.fulfill()
             }else{
                 XCTFail("parsed is not as Expected")
+                promise.fulfill()
             }
         }) { (error) in
             XCTFail("parsing  error")
+            promise.fulfill()
         }
         wait(for: [promise], timeout: 5)
         
